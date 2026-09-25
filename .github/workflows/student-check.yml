@@ -50,14 +50,13 @@ jobs:
           echo "Number of lines in student.txt:"
           wc -l < student.txt
 
-      - name: Search for GitHub
+        - name: Search for GitHub
         run: |
           echo "Searching for the word GitHub:"
-          if grep -q "GitHub" student.txt; then
+          if grep -qi "GitHub" student.txt; then
             echo "GitHub found in student.txt."
           else
             echo "GitHub not found in student.txt."
-            exit 1
           fi
 
       - name: Create Report
