@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
 
       - name: Display Repository Information
         run: |
@@ -50,7 +50,7 @@ jobs:
           echo "Number of lines in student.txt:"
           wc -l < student.txt
 
-        - name: Search for GitHub
+      - name: Search for GitHub
         run: |
           echo "Searching for the word GitHub:"
           if grep -qi "GitHub" student.txt; then
@@ -65,8 +65,7 @@ jobs:
           cat report.txt
 
       - name: Upload Report Artifact
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v4
         with:
           name: student-report
           path: report.txt
-          
