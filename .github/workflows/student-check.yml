@@ -17,10 +17,10 @@ jobs:
       - name: Display Repository Information
         run: |
           echo "Student Name:"
-          grep "^Name:" student.txt
+          sed -n '1p' student.txt
 
           echo "Roll Number:"
-          grep "^Roll Number:" student.txt
+          sed -n '2p' student.txt
 
           echo "Current Date and Time:"
           date
