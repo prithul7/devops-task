@@ -66,7 +66,7 @@ jobs:
           cat report.txt
 
       - name: Upload Report Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: student-report
           path: report.txt
